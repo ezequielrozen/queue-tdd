@@ -6,40 +6,40 @@ public class NodoTest {
 
     @Test
     public void deberiaCrearUnNodoConUnDatoEntero() {
-        assertEquals((new Nodo<Integer>(5)).getDato(), new Integer(5));
+        assertEquals((new Nodo(5)).getDato(), new Integer(5));
     }
 
     @Test
     public void deberiaCrearUnNodoVacioYSetarleElDato() {
-        Nodo<Integer> aNodo = new Nodo<Integer>();
+        Nodo aNodo = new Nodo();
         aNodo.setDato(5);
         assertEquals(aNodo.getDato(), new Integer(5));
     }
 
     @Test
     public void deberiaCrearUnNodoSinSiguiente() {
-        Nodo<String> aNodo = new Nodo<String>("lala");
+        Nodo aNodo = new Nodo("lala");
         assertEquals(aNodo.tieneSiguiente(), false);
     }
 
     @Test
     public void deberiaCrearUnNodoConDato() {
-        Nodo<String> aNodo = new Nodo<String>("lala");
+        Nodo aNodo = new Nodo("lala");
         assertEquals(aNodo.getDato(),"lala");
     }
 
     @Test
     public void deberiaSetearseElNodoSiguiente() {
-        Nodo<String> aNodo = new Nodo<String>("lala");
-        Nodo<String> otroNodo = new Nodo<String>("hola");
+        Nodo aNodo = new Nodo("lala");
+        Nodo otroNodo = new Nodo("hola");
         aNodo.setSiguiente(otroNodo);
         assertTrue(aNodo.tieneSiguiente());
     }
 
     @Test
     public void deberiaObtenerseElDatoDelNodoSiguiete() {
-        Nodo<String> aNodo = new Nodo<String>("lala");
-        Nodo<String> otroNodo = new Nodo<String>("hola");
+        Nodo aNodo = new Nodo("lala");
+        Nodo otroNodo = new Nodo("hola");
         aNodo.setSiguiente(otroNodo);
         assertEquals(aNodo.getSiguiente().getDato(), "hola");
     }

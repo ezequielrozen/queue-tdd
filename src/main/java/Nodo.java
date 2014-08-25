@@ -1,17 +1,14 @@
-/**
- * Created by ezequiel on 22/08/14.
- */
-public class Nodo<T> {
+public class Nodo {
 
     private Nodo siguiente;
-    private T dato;
+    private Object dato;
 
     public Nodo() {
         this.siguiente=null;
         this.dato=null;
     }
 
-    public Nodo(T aDato) {
+    public Nodo(Object aDato) {
         this.siguiente=null;
         this.dato=aDato;
     }
@@ -24,11 +21,11 @@ public class Nodo<T> {
         this.siguiente=sig;
     }
 
-    public T getDato() {
+    public Object getDato() {
         return this.dato;
     }
 
-    public void setDato(T dato) {
+    public void setDato(Object dato) {
         this.dato = dato;
     }
 
