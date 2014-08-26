@@ -33,7 +33,7 @@ public class Cola {
         }
     }
 
-    public Object remove() throws AssertionError{
+    public Object remove() throws AssertionError {
         if (!this.isEmpty()) {
             Object resultado = raiz.getDato();
             if (this.raiz == this.ultimo){
@@ -47,7 +47,7 @@ public class Cola {
             throw new AssertionError("La cola esta vacia.");
     }
 
-    public Object top() throws AssertionError{
+    public Object top() throws AssertionError {
         if (!this.isEmpty()) {
             Object resultado = raiz.getDato();
             return resultado;
