@@ -6,14 +6,14 @@ public class NodoTest {
 
     @Test
     public void deberiaCrearUnNodoConUnDatoEntero() {
-        assertEquals((new Nodo(5)).getDato(), new Integer(5));
+        assertEquals((new Nodo(5)).getDato(), 5);
     }
 
     @Test
     public void deberiaCrearUnNodoVacioYSetarleElDato() {
         Nodo aNodo = new Nodo();
         aNodo.setDato(5);
-        assertEquals(aNodo.getDato(), new Integer(5));
+        assertEquals(aNodo.getDato(), 5);
     }
 
     @Test
