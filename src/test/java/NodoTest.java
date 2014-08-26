@@ -10,13 +10,6 @@ public class NodoTest {
     }
 
     @Test
-    public void deberiaCrearUnNodoVacioYSetarleElDato() {
-        Nodo aNodo = new Nodo();
-        aNodo.setDato(5);
-        assertEquals(aNodo.getDato(), 5);
-    }
-
-    @Test
     public void deberiaCrearUnNodoSinSiguiente() {
         Nodo aNodo = new Nodo("lala");
         assertEquals(aNodo.tieneSiguiente(), false);

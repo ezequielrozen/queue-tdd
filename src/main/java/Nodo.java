@@ -3,13 +3,7 @@ public class Nodo {
     private Nodo siguiente;
     private Object dato;
 
-    public Nodo() {
-        this.siguiente=null;
-        this.dato=null;
-    }
-
     public Nodo(Object aDato) {
-        this.siguiente=null;
         this.dato=aDato;
     }
 

@@ -2,10 +2,7 @@ public class Cola {
 
     private Nodo raiz,ultimo;
 
-    public Cola() {
-        this.raiz=null;
-        this.ultimo=null;
-    }
+    public Cola() { }
 
     public boolean isEmpty() {
         return this.raiz==null;
@@ -22,8 +19,7 @@ public class Cola {
     }
 
     public void add(Object item) {
-        Nodo nuevo = new Nodo();
-        nuevo.setDato(item);
+        Nodo nuevo = new Nodo(item);
         if (this.isEmpty()) {
             this.raiz = nuevo;
             this.ultimo = nuevo;
