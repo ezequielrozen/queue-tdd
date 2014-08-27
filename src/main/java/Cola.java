@@ -1,4 +1,4 @@
-public class Cola {
+public class Cola implements Queue {
 
     private Nodo raiz,ultimo;
 
