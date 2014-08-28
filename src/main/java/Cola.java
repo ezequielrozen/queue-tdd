@@ -9,13 +9,13 @@ public class Cola implements Queue {
     }
 
     public int size() {
-        int cant=0;
-        Nodo reco=this.raiz;
-        while (reco!=null) {
-            cant++;
-            reco=reco.getSiguiente();
+        int cantidad=0;
+        Nodo auxiliar=this.raiz;
+        while (auxiliar!=null) {
+            cantidad++;
+            auxiliar=auxiliar.getSiguiente();
         }
-        return cant;
+        return cantidad;
     }
 
     public void add(Object item) {
@@ -45,8 +45,7 @@ public class Cola implements Queue {
 
     public Object top() throws AssertionError {
         if (!this.isEmpty()) {
-            Object resultado = raiz.getDato();
-            return resultado;
+            return raiz.getDato();
         } else
             throw new AssertionError("La cola esta vacia.");
     }
