@@ -1,52 +1,33 @@
 public class Cola implements Queue {
 
-    private Nodo raiz,ultimo;
+    private LinkedList list;
 
-    public Cola() { }
+    public Cola() {
+        this.list=new LinkedList();
+    }
 
+    @Override
     public boolean isEmpty() {
-        return this.raiz==null;
+        return this.list.isEmpty();
     }
 
+    @Override
     public int size() {
-        int cantidad=0;
-        Nodo auxiliar=this.raiz;
-        while (auxiliar!=null) {
-            cantidad++;
-            auxiliar=auxiliar.getSiguiente();
-        }
-        return cantidad;
+        return this.list.size();
     }
 
+    @Override
     public void add(Object item) {
-        Nodo nuevo = new Nodo(item);
-        if (this.isEmpty()) {
-            this.raiz = nuevo;
-            this.ultimo = nuevo;
-        } else {
-            this.ultimo.setSiguiente(nuevo);
-            this.ultimo = nuevo;
-        }
+        this.list.addToEnd(item);
     }
 
-    public Object remove() throws AssertionError {
-        if (!this.isEmpty()) {
-            Object resultado = raiz.getDato();
-            if (this.raiz == this.ultimo){
-                this.raiz = null;
-                this.ultimo = null;
-            } else {
-                this.raiz = this.raiz.getSiguiente();
-            }
-            return resultado;
-        } else
-            throw new AssertionError("La cola esta vacia.");
+    @Override
+    public void remove() throws AssertionError {
+        this.list.deleteFirst();
     }
 
+    @Override
     public Object top() throws AssertionError {
-        if (!this.isEmpty()) {
-            return raiz.getDato();
-        } else
-            throw new AssertionError("La cola esta vacia.");
+        return this.list.getFirst();
     }
 }
