@@ -1,14 +1,14 @@
-public class NodoNormal implements Nodo {
+public class NormalNode implements Nodo {
 
-    private Nodo nextNode;
+    private Nodo nextNode = new NullNode();
     private Object data;
 
-    public NodoNormal(Object data) {
-        this.nextNode=new NodoNull();
+    public NormalNode(Object data) {
         this.data=data;
     }
 
-    void setNext(Nodo newNode) {
+    @Override
+    public void setNext(Nodo newNode) {
         this.nextNode=newNode;
     }
 
@@ -28,7 +28,7 @@ public class NodoNormal implements Nodo {
     }
 
     @Override
-    public void passNode(NodoNormal previousNode, Object data) {
-        this.passNode(this,data);
+    public void passData(Nodo previousNode, Object data) {
+        this.passData(this,data);
     }
 }

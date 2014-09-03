@@ -27,10 +27,10 @@ public class ColaTest {
     }
 
     @Test
-    public void deberiaDevolverElValorDelPrimerElementoDeLaColaYDejarlaVacia() {
+    public void deberiaDejarLaColaVacia() {
         Cola cola = new Cola();
         cola.add(6);
-        assertEquals(cola.remove(),6);
+        cola.remove();
         assertTrue(cola.isEmpty());
     }
 

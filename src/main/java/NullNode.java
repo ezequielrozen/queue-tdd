@@ -1,11 +1,6 @@
-public class NodoNull implements Nodo {
+public class NullNode implements Nodo {
 
-    //TODO: No se si va este atributo
-    private NodoNormal nextNode;
-
-    public NodoNull() {
-
-    }
+    public NullNode() { }
 
     @Override
     public Object getData() {
@@ -23,7 +18,12 @@ public class NodoNull implements Nodo {
     }
 
     @Override
-    public void passNode(NodoNormal previousNode, Object data) {
-        previousNode.setNext(new NodoNormal(data));
+    public void passData(Nodo previousNode, Object data) {
+        previousNode.setNext(new NormalNode(data));
+    }
+
+    @Override
+    public void setNext(Nodo newNode) {
+        //Nothing todo.
     }
 }
