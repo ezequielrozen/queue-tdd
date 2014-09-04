@@ -23,7 +23,7 @@ public class NullNode implements Node {
     }
 
     @Override
-    public void setNext(NormalNode newNode) {
+    public void setNext(Node newNode) {
 
     }
 }

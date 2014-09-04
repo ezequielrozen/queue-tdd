@@ -1,13 +1,13 @@
 public class LinkedList {
 
-    private Node root;
+    private Node top;
 
     public LinkedList() {
-        this.root = new NullNode();
+        this.top = new TopNode();
     }
 
     public int size() {
-        return (this.root.count());
+        return (this.top.count());
     }
 
     public boolean isEmpty() {
@@ -15,15 +15,15 @@ public class LinkedList {
     }
 
     public Object getFirst() {
-        return this.root.getData();
+        return this.top.getData();
     }
 
     public void deleteFirst() {
-        this.root=this.root.next();
+        this.top.setNext(this.top.next().next());
     }
 
     public void addToEnd(Object data) {
-        this.root.passData(this.root,data);
+        this.top.passData(this.top,data);
     }
 
 }

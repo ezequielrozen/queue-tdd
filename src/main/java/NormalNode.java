@@ -8,7 +8,7 @@ public class NormalNode implements Node {
     }
 
     @Override
-    public void setNext(NormalNode newNode) {
+    public void setNext(Node newNode) {
         this.nextNode=newNode;
     }
 
