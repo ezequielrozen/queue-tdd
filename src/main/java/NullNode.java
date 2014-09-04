@@ -1,4 +1,4 @@
-public class NullNode implements Nodo {
+public class NullNode implements Node {
 
     public NullNode() { }
 
@@ -8,7 +8,7 @@ public class NullNode implements Nodo {
     }
 
     @Override
-    public Nodo next() {
+    public Node next() {
         throw new AssertionError("La cola esta vacia");
     }
 
@@ -18,12 +18,12 @@ public class NullNode implements Nodo {
     }
 
     @Override
-    public void passData(Nodo previousNode, Object data) {
+    public void passData(Node previousNode, Object data) {
         previousNode.setNext(new NormalNode(data));
     }
 
     @Override
-    public void setNext(Nodo newNode) {
-        //Nothing todo.
+    public void setNext(NormalNode newNode) {
+
     }
 }

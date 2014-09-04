@@ -1,6 +1,6 @@
-public class NormalNode implements Nodo {
+public class NormalNode implements Node {
 
-    private Nodo nextNode = new NullNode();
+    private Node nextNode = new NullNode();
     private Object data;
 
     public NormalNode(Object data) {
@@ -8,7 +8,7 @@ public class NormalNode implements Nodo {
     }
 
     @Override
-    public void setNext(Nodo newNode) {
+    public void setNext(NormalNode newNode) {
         this.nextNode=newNode;
     }
 
@@ -18,7 +18,7 @@ public class NormalNode implements Nodo {
     }
 
     @Override
-    public Nodo next() {
+    public Node next() {
         return this.nextNode;
     }
 
@@ -28,7 +28,7 @@ public class NormalNode implements Nodo {
     }
 
     @Override
-    public void passData(Nodo previousNode, Object data) {
-        this.passData(this,data);
+    public void passData(Node previousNode, Object data) {
+        this.next().passData(this,data);
     }
 }

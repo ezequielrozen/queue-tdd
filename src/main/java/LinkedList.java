@@ -1,13 +1,13 @@
 public class LinkedList {
 
-    private Nodo raiz;
+    private Nodo root;
 
     public LinkedList() {
-        this.raiz = new NullNode();
+        this.root = new NullNode();
     }
 
     public int size() {
-        return (this.raiz.count());
+        return (this.root.count());
     }
 
     public boolean isEmpty() {
@@ -15,15 +15,15 @@ public class LinkedList {
     }
 
     public Object getFirst() {
-        return this.raiz.getData();
+        return this.root.getData();
     }
 
     public void deleteFirst() {
-        this.raiz=this.raiz.next();
+        this.root=this.root.next();
     }
 
     public void addToEnd(Object data) {
-        this.raiz.passData(this.raiz,data);
+        this.root.passData(this.root,data);
     }
 
 }
