@@ -1,6 +1,6 @@
 public class LinkedList {
 
-    private Nodo root;
+    private Node root;
 
     public LinkedList() {
         this.root = new NullNode();
