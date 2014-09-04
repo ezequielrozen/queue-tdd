@@ -29,6 +29,6 @@ public class NormalNode implements Node {
 
     @Override
     public void passData(Node previousNode, Object data) {
-        this.next().passData(this,data);
+        this.nextNode.passData(this,data);
     }
 }
